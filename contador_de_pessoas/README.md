@@ -25,4 +25,4 @@
 * Mundo invertido? < 0 pessoas
 
 ## Imagem do App
-![Screenshot](WhatsApp Image 2020-06-16 at 12.52.33.jpeg)
+![Screenshot](screenshot.png)
