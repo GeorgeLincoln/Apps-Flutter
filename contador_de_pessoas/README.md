@@ -5,10 +5,10 @@
 * Por Daniel Ciolfi
 * Plataforma Udemy
  
-## Intalação
+## Instalação
  
 * Baixe o app
-* Abra o app no VsCode ou Android Studio
+* Abra o app no Visual Studio Code ou Android Studio
 * Instale o app em um aparelho Android
 
 ## Instruções
