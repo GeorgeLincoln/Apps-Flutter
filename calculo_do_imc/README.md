@@ -24,4 +24,4 @@
 * Lotado > 10 pessoas
 * Mundo invertido? < 0 pessoas
 
-## Imagem do App
+## Imagem do Aplicativo
