@@ -1,16 +1,29 @@
-# contador_de_pessoas
+# App Contador de Pessoas (*Android*)
 
-A new Flutter project.
+* Esse app faz parte de um conjunto de projetos do curso
+* Criação de Apps Android e iOS com Flutter 
+* Por Daniel Ciolfi
+* Plataforma Udemy
+ 
+## Instalação
+ 
+* Baixe o app
+* Abra o app no Visual Studio Code ou Android Studio
+* Instale o app em um aparelho Android
 
-## Getting Started
+## Instruções
 
-This project is a starting point for a Flutter application.
+* O primeiro texto informa a quantidade de pessoas
+* Para adicionar uma pessoa, click em +1
+* Para remover uma pessoa, click em -1
+* O segundo texto informa o estado do estabelecimento
 
-A few resources to get you started if this is your first Flutter project:
+## Estados do estabelecimento
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* Pode Entrar <= 10 pessoas
+* Lotado > 10 pessoas
+* Mundo invertido? < 0 pessoas
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Imagem do App
+![Screenshot](https://user-images.githubusercontent.com/23343723/84799285-72120d00-afd2-11ea-8d5f-3d9eb7718eef.jpeg)
+
