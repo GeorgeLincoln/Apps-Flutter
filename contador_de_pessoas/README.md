@@ -25,4 +25,4 @@
 * Mundo invertido? < 0 pessoas
 
 ## Imagem do App
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
