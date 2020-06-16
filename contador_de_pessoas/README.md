@@ -23,3 +23,6 @@
 * Pode Entrar <= 10 pessoas
 * Lotado > 10 pessoas
 * Mundo invertido? < 0 pessoas
+
+## Imagem do App
+![Screenshot](WhatsApp Image 2020-06-16 at 12.52.33.jpeg)
