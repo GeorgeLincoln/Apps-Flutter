@@ -5,18 +5,21 @@
 * Por Daniel Ciolfi
 * Plataforma Udemy
  
-## Intalação e instruções
+## Intalação
  
 * Baixe o app
-* Instale o aplicativo
-* Abra o app
+* Abra o app no VsCode ou Android Studio
+* Instale o app em um aparelho Android
+
+## Instruções
+
 * O primeiro texto informa a quantidade de pessoas
 * Para adicionar uma pessoa, click em +1
 * Para remover uma pessoa, click em -1
 * O segundo texto informa o estado do estabelecimento
 
-## Estados do estabelecimento:
+## Estados do estabelecimento
+
 * Pode Entrar <= 10 pessoas
 * Lotado > 10 pessoas
 * Mundo invertido? < 0 pessoas
-
