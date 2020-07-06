@@ -12,4 +12,4 @@
 
 * Contador de pessoas
 * Calculadora de IMC
-* Contador de moedas
+* Converdor de moedas
