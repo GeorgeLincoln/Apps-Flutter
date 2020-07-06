@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Home(),
   ));
 }
@@ -24,6 +25,10 @@ class _HomeState extends State<Home> {
     alturaController.text = "";
     setState(() {
       _infoText = "Informe seus Dados";
+<<<<<<< HEAD
+=======
+       _formKey = GlobalKey<FormState>();
+>>>>>>> ac38ff69c3a00078a7884c383d6fbb243d7ec2bf
     });
   }
 
@@ -133,6 +138,12 @@ class _HomeState extends State<Home> {
                       style: TextStyle(color: Colors.green, fontSize: 17.0)),
                 ],
               ),
+<<<<<<< HEAD
             )));
+=======
+            )
+        )
+    );
+>>>>>>> ac38ff69c3a00078a7884c383d6fbb243d7ec2bf
   }
 }

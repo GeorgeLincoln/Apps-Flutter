@@ -30,12 +30,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final realController = TextEditingController();
-  final dolarController = TextEditingController();
-  final euroController = TextEditingController();
-
   double dolar;
+  final dolarController = TextEditingController();
   double euro;
+  final euroController = TextEditingController();
+  final realController = TextEditingController();
 
   void _clearAll() {
     realController.text = "";
@@ -78,14 +77,15 @@ class _HomeState extends State<Home> {
     return Container(
       child: Scaffold(
           // coloca a barra em cima
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           appBar: AppBar(
-            title: Text("\$ Conversor de Moedas \$"),
-            backgroundColor: Colors.amber,
+            title: Text("\$ Converter Moedas \$"),
+            backgroundColor: Colors.greenAccent,
             centerTitle: true,
           ),
           body: FutureBuilder<Map>(
             future: getData(),
+            // ignore: missing_return
             builder: (context, snapshot) {
               var connectionState = snapshot.connectionState;
               switch (connectionState) {
@@ -94,29 +94,33 @@ class _HomeState extends State<Home> {
                   return Center(
                     child: Text(
                       "Carregando Dados...",
-                      style: TextStyle(color: Colors.amber, fontSize: 25.0),
+                      style:
+                          TextStyle(color: Colors.greenAccent, fontSize: 25.0),
                       textAlign: TextAlign.center,
                     ),
                   );
                 case ConnectionState.active:
+                // ignore: todo
                 // TODO: Handle this case.
 
                 case ConnectionState.done:
+                  // ignore: todo
                   // TODO: Handle this case.
 
+                  // ignore: unused_label
                   defaut:
                   if (snapshot.hasError) {
                     return Center(
                       child: Text(
                         "Erro ao Carregar Dados :(",
-                        style: TextStyle(color: Colors.amber, fontSize: 25.0),
+                        style: TextStyle(
+                            color: Colors.greenAccent, fontSize: 25.0),
                         textAlign: TextAlign.center,
                       ),
                     );
                   } else {
                     dolar =
                         snapshot.data["results"]["currencies"]["USD"]["buy"];
-                    //real = snapshot.data["results"]["currencies"]["BRL"]["buy"];
                     euro = snapshot.data["results"]["currencies"]["EUR"]["buy"];
 
                     return SingleChildScrollView(
@@ -124,16 +128,29 @@ class _HomeState extends State<Home> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-                            Icon(Icons.monetization_on,
-                                size: 150.0, color: Colors.amber),
-                            buildTextField(
-                                "Reais", "R\$ ", realController, _realChanged),
-                            Divider(),
-                            buildTextField("Dólares", "US\$ ", dolarController,
-                                _dolarChanged),
-                            Divider(),
-                            buildTextField(
-                                "Euros", "€\$ ", euroController, _euroChanged),
+                            FlatButton(
+                                onPressed: _clearAll,
+                                child: Icon(Icons.monetization_on,
+                                    size: 150.0, color: Colors.greenAccent)),
+                            Container(
+                                margin: const EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(3.0),
+                                decoration: BoxDecoration(
+                                    border:
+                                        Border.all(color: Colors.grey[100])),
+                                child: Column(
+                                  children: [
+                                    Padding(padding: EdgeInsets.all(5.0)),
+                                    buildTextField("Reais", "R\$ ",
+                                        realController, _realChanged),
+                                    Divider(),
+                                    buildTextField("Dólares", "US\$ ",
+                                        dolarController, _dolarChanged),
+                                    Divider(),
+                                    buildTextField("Euros", "€\$ ",
+                                        euroController, _euroChanged),
+                                  ],
+                                )),
                           ]),
                     );
                   }
@@ -150,10 +167,10 @@ Widget buildTextField(
     controller: c,
     decoration: InputDecoration(
         labelText: label,
-        labelStyle: TextStyle(color: Colors.amber),
+        labelStyle: TextStyle(color: Colors.green),
         border: OutlineInputBorder(),
         prefixText: prefix),
-    style: TextStyle(color: Colors.amber, fontSize: 20.0),
+    style: TextStyle(color: Colors.green, fontSize: 20.0),
     onChanged: f,
     keyboardType: TextInputType.numberWithOptions(decimal: true), //só números
   );
@@ -163,6 +180,3 @@ Future<Map> getData() async {
   http.Response response = await http.get(request);
   return json.decode(response.body);
 }
-
-/* 
-    ));*/

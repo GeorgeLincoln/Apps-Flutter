@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
       //para suportar widget do material designer
+      debugShowCheckedModeBanner: false,
       title: "Contador de Pessoas", // parametros opcionais
       home: Home()));
 }
