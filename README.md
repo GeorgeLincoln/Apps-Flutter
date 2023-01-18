@@ -4,13 +4,15 @@
  
 * Baixe o repositório
 * Descompile a pasta Apps-Flutter
-* Abra a pasta no Visual Studio Code ou no Android Studio
-* Instale o app desejado em um aparelho Android ou iOS
+* Abra a pasta do app desejado no prompt de comando (ex: cmd, terminal)
+* Instale o app desejado o aplicativo desejado com o comando flutter run --no-sound-null-safety
 * Aproveite!!
 
 ## Aplicativos até o momento
 
-* Contador de pessoas
+* Buscador de gifs
 * Calculadora de IMC
+* Contador de pessoas
 * Converdor de moedas
+* Lista de compras
 * Lista de tarefas
