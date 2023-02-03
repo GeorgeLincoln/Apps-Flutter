@@ -25,10 +25,6 @@ class _HomeState extends State<Home> {
     alturaController.text = "";
     setState(() {
       _infoText = "Informe seus Dados";
-<<<<<<< HEAD
-=======
-       _formKey = GlobalKey<FormState>();
->>>>>>> ac38ff69c3a00078a7884c383d6fbb243d7ec2bf
     });
   }
 
@@ -120,7 +116,8 @@ class _HomeState extends State<Home> {
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Container(
                       height: 40.0,
-                      child: RaisedButton(
+                      child: TextButton(
+                        style: ButtonStyle (backgroundColor: MaterialStateProperty.all(Colors.green)),
                         onPressed: () {
                           //caso a chave global estiver válida, calcula.
                           if (_chaveGlobal.currentState.validate()) _calcular();
@@ -129,7 +126,7 @@ class _HomeState extends State<Home> {
                           "Calcular",
                           style: TextStyle(color: Colors.white, fontSize: 17.0),
                         ),
-                        color: Colors.green,
+                        //color: Colors.green,
                       ),
                     ),
                   ),
@@ -138,12 +135,6 @@ class _HomeState extends State<Home> {
                       style: TextStyle(color: Colors.green, fontSize: 17.0)),
                 ],
               ),
-<<<<<<< HEAD
             )));
-=======
-            )
-        )
-    );
->>>>>>> ac38ff69c3a00078a7884c383d6fbb243d7ec2bf
   }
 }

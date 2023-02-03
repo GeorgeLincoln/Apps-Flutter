@@ -1,9 +1,14 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/home/george/Downloads/flutter_linux_v1.9.1+hotfix.6-stable/flutter
-FLUTTER_APPLICATION_PATH=/home/george/Área de Trabalho/move_aqua
-FLUTTER_TARGET=lib/main.dart
+FLUTTER_ROOT=C:\flutter_windows_3.3.10-stable\flutter
+FLUTTER_APPLICATION_PATH=C:\Users\Jéssica\Desktop\Apps-Flutter\TCC-aquicultura-mobile-master
+COCOAPODS_PARALLEL_CODE_SIGN=true
+FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build
-SYMROOT=${SOURCE_ROOT}/../build/ios
-FLUTTER_FRAMEWORK_DIR=/home/george/Downloads/flutter_linux_v1.9.1+hotfix.6-stable/flutter/bin/cache/artifacts/engine/ios
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
+EXCLUDED_ARCHS[sdk=iphonesimulator*]=i386
+EXCLUDED_ARCHS[sdk=iphoneos*]=armv7
+DART_OBFUSCATION=false
+TRACK_WIDGET_CREATION=true
+TREE_SHAKE_ICONS=false
+PACKAGE_CONFIG=.dart_tool/package_config.json
