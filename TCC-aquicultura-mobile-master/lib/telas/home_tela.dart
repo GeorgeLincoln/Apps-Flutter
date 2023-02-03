@@ -15,7 +15,6 @@ class HomeTela extends StatefulWidget {
 }
 
 class _HomeTelaState extends State<HomeTela> {
-
   PageController _pageController;
   int _page = 0;
 
@@ -39,56 +38,41 @@ class _HomeTelaState extends State<HomeTela> {
       backgroundColor: Colors.indigo,
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
-          canvasColor: Colors.indigo,
-          primaryColor: Colors.white,
-          textTheme: Theme.of(context).textTheme.copyWith(
-            caption: TextStyle(color: Colors.white54)
-          )
-        ),
+            canvasColor: Colors.indigo,
+            primaryColor: Colors.white,
+            textTheme: Theme.of(context)
+                .textTheme
+                .copyWith(caption: TextStyle(color: Colors.white54))),
         child: BottomNavigationBar(
-          currentIndex: _page,
-          onTap: (p){
-            _pageController.animateToPage(
-              p,
-              duration: Duration(microseconds: 500),
-              curve: Curves.ease
-            );
-
-          },
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.insert_chart),
-              title: Text("Gráficos")
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.map),
-              title: Text("Localização")
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.announcement),
-              title: Text("Relatório")
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
-              title: Text("Pedidos")
-            )
-          ]
-        ),
+            currentIndex: _page,
+            onTap: (p) {
+              _pageController.animateToPage(p,
+                  duration: Duration(microseconds: 500), curve: Curves.ease);
+            },
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.insert_chart),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.map),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.announcement),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart),
+              )
+            ]),
       ),
       body: SafeArea(
         child: PageView(
           controller: _pageController,
-          onPageChanged: (p){
+          onPageChanged: (p) {
             setState(() {
               _page = p;
             });
           },
-          children: <Widget>[
-            Cards(),
-            NewTaskPage(),
-            Relatorio(),
-            FormTanque()
-          ],
+          children: <Widget>[Cards(), NewTaskPage(), Relatorio(), FormTanque()],
         ),
       ),
     );

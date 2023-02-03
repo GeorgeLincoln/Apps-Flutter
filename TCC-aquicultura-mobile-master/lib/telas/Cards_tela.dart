@@ -1,15 +1,8 @@
 import 'package:aquicultura_transporte/tabs/charts_tab.dart';
 import 'package:aquicultura_transporte/telas/Form_tanque_tela.dart';
 import 'package:aquicultura_transporte/widgets/AppBar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../telas/Form_tanque_tela.dart';
 import '../validators/firebase_validators.dart';
-
-//dados
-//lista
-//materia
 
 int tanque = 2;
 double oxi = 12.5, temp = 23.2;
@@ -54,7 +47,7 @@ class _CardsState extends State<Cards> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Container(
-                child: FlatButton(
+                child: TextButton(
                   child: Row(
                     children: <Widget>[
                       Icon(
@@ -107,8 +100,10 @@ class _CardsState extends State<Cards> {
               Container(
                 child: new ButtonBar(
                   children: <Widget>[
-                    FlatButton(
-                      textColor: Colors.white,
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                      ),
                       child: Icon(Icons.edit),
                       onPressed: () {
                         Navigator.push(
@@ -118,8 +113,10 @@ class _CardsState extends State<Cards> {
                         );
                       },
                     ),
-                    FlatButton(
-                      textColor: Colors.white,
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                      ),
                       child: Icon(Icons.delete),
                       onPressed: () {
                         deleteTanque(1);
@@ -129,26 +126,26 @@ class _CardsState extends State<Cards> {
                 ),
               ),
 
-//                                       RaisedButton(
+//                                       TextButton(
 //   child: Text('Create Tanque'),
 //   onPressed: () {
 //     createTanque(6, 31, 13);
 //     cont++;
 //   },
 // ),
-// RaisedButton(
+// TextButton(
 //   child: Text('Ver Tanque'),
 //   onPressed: () {
 //     getTanque(2);
 //   },
 // ),
-// RaisedButton(
+// TextButton(
 //   child: Text('Envia dados do Tanque'),
 //   onPressed: () {
 //     updateData(4);
 //   },
 // ),
-// RaisedButton(
+// TextButton(
 //   child: Text('Delete o Tanque ' + cont.toString()),
 //   onPressed: () {
 //     deleteTanque(cont);

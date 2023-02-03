@@ -62,17 +62,16 @@ class _NewTaskPageState extends State<NewTaskPage> {
 
     print(_connectionStatus);
 
-    if(_connectionStatus == "ConnectivityResult.none"){
+    if (_connectionStatus == "ConnectivityResult.none") {
       showInSnackBar("No internet connection currently available");
       setState(() {
         _saving = false;
       });
     } else {
-
       bool isExist = false;
 
       QuerySnapshot query =
-      await Firestore.instance.collection("admins").getDocuments();
+          await Firestore.instance.collection("admins").getDocuments();
 
       query.documents.forEach((doc) {
         if (listNameController.text.toString() == doc.documentID) {
@@ -195,7 +194,7 @@ class _NewTaskPageState extends State<NewTaskPage> {
                           ),
                           ButtonTheme(
                             minWidth: double.infinity,
-                            child: RaisedButton(
+                            child: TextButton(
                               elevation: 3.0,
                               onPressed: () {
                                 pickerColor = currentColor;
@@ -214,7 +213,7 @@ class _NewTaskPageState extends State<NewTaskPage> {
                                         ),
                                       ),
                                       actions: <Widget>[
-                                        FlatButton(
+                                        TextButton(
                                           child: Text('Got it'),
                                           onPressed: () {
                                             setState(() =>
@@ -239,7 +238,7 @@ class _NewTaskPageState extends State<NewTaskPage> {
                       padding: EdgeInsets.only(top: 50.0),
                       child: new Column(
                         children: <Widget>[
-                          new RaisedButton(
+                          new TextButton(
                             child: const Text(
                               'Add',
                               style: TextStyle(color: Colors.white),
@@ -278,10 +277,10 @@ class _NewTaskPageState extends State<NewTaskPage> {
     initConnectivity();
     _connectivitySubscription =
         _connectivity.onConnectivityChanged.listen((ConnectivityResult result) {
-          setState(() {
-            _connectionStatus = result.toString();
-          });
-        });
+      setState(() {
+        _connectionStatus = result.toString();
+      });
+    });
   }
 
   void showInSnackBar(String value) {
