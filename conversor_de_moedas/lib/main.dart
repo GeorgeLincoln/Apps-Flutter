@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-                            FlatButton(
+                            TextButton(
                                 onPressed: _clearAll,
                                 child: Icon(Icons.monetization_on,
                                     size: 150.0, color: Colors.greenAccent)),
