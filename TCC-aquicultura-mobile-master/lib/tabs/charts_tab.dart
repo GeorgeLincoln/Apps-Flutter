@@ -10,7 +10,6 @@ import 'package:flutter_circular_chart/flutter_circular_chart.dart';
 //lista
 //materia
 class ChartTab extends StatelessWidget {
-  
   var data = [0.0, 1.0, 1.5, 2.0, 0.0, 0.0, -0.5, -1.0, -0.5, 0.0, 0.0];
   var data1 = [0.0, -2.0, 3.5, -2.0, 0.5, 0.7, 0.8, 1.0, 2.0, 3.0, 3.2];
 
@@ -156,30 +155,29 @@ class ChartTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbar.getAppBar(context),
-      body: Container(
-        color: Colors.blueGrey[100],
-        child:  StaggeredGridView.count(
-          crossAxisCount: 4,
-          crossAxisSpacing: 12.0,
-          mainAxisSpacing: 12.0,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(7.0),
-              child: mychart1Items("Temperatura"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(7.0),
-            child: mychart2Items("Oxigênio"),
-            ),
-          ],
-          staggeredTiles: [
-            StaggeredTile.extent(4, 220.0),
-            StaggeredTile.extent(4, 220.0),
-          ],
-        ),
-      )
-    );
+        appBar: appbar.getAppBar(context),
+        body: Container(
+          color: Colors.blueGrey[100],
+          child: StaggeredGridView.count(
+            crossAxisCount: 4,
+            crossAxisSpacing: 12.0,
+            mainAxisSpacing: 12.0,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: mychart1Items("Temperatura"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: mychart2Items("Oxigênio"),
+              ),
+            ],
+            staggeredTiles: [
+              StaggeredTile.extent(4, 220.0),
+              StaggeredTile.extent(4, 220.0),
+            ],
+          ),
+        ));
   }
 }
 
@@ -201,37 +199,37 @@ class ChartTab extends StatelessWidget {
 //               ButtonTheme.bar(
 //                 child: ButtonBar(
 //                   children: <Widget>[
-//                     FlatButton(
+//                     TextButton(
 //                       child: const Text('Edit', style: TextStyle(color: Colors.white)),
 //                       onPressed: () {},
 //                     ),
-//                     FlatButton(
+//                     TextButton(
 //                       child: const Text('Delete', style: TextStyle(color: Colors.white)),
 //                       onPressed: () {},
 //                     ),
 //                   ],
 //                 ),
 //               ),
-//               RaisedButton(
+//               TextButton(
 //                 child: Text('Create Tanque'),
 //                 onPressed: () {
 //                   createTanque(cont);
 //                   cont++;
 //                 },
 //               ),
-//               RaisedButton(
+//               TextButton(
 //                 child: Text('Ver Tanque'),
 //                 onPressed: () {
 //                   getTanque(2);
 //                 },
 //               ),
-//                RaisedButton(
+//                TextButton(
 //                 child: Text('Envia dados do Tanque'),
 //                 onPressed: () {
 //                   updateData(4);
 //                 },
 //               ),
-//               RaisedButton(
+//               TextButton(
 //                 child: Text('Delete o Tanque ' + cont.toString()),
 //                 onPressed: () {
 //                   deleteTanque(cont);

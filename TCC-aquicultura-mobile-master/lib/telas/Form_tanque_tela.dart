@@ -1,8 +1,6 @@
 import 'package:aquicultura_transporte/validators/firebase_validators.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import '../validators/firebase_validators.dart';
-
 
 class FormTanque extends StatefulWidget {
   @override
@@ -20,16 +18,21 @@ class _FormTanqueState extends State<FormTanque> {
   double temp = 29.6;
   double oxi = 12.5;
 
-  var tanques =  ['Tanque ', 'Tanque  ', 'Tanque ','Tanque ', 'Tanque  ', 'Tanque '] ;
-
+  var tanques = [
+    'Tanque ',
+    'Tanque  ',
+    'Tanque ',
+    'Tanque ',
+    'Tanque  ',
+    'Tanque '
+  ];
 
   void _submit() {
     print('Criando Tanque $tanque...');
-        createTanque(tanque, temp, oxi);
+    createTanque(tanque, temp, oxi);
     getTanque(tanque);
     //getID(tanque);
     tanque++;
-    
 
     setState(() {
       _saving = true;
@@ -70,7 +73,6 @@ class _FormTanqueState extends State<FormTanque> {
               ),
             ),
           ),
-          
           new SwitchListTile(
             title: const Text('Oxigênio'),
             value: _num_Oxi,
@@ -84,7 +86,6 @@ class _FormTanqueState extends State<FormTanque> {
           Padding(
             padding: EdgeInsets.only(left: 30),
             child: TextField(
-              
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 border: InputBorder.none,
@@ -97,16 +98,16 @@ class _FormTanqueState extends State<FormTanque> {
           Padding(
             padding: EdgeInsets.only(top: 30),
             child: StreamBuilder<bool>(
-            builder: (context, snapshot) {
-              return SizedBox(
-                height: 40,
-                child: RaisedButton(
-                  color: Colors.indigo[700],
-                  child: Text("Save"),
-                  onPressed: _submit,
-                  textColor: Colors.white,
-                  disabledColor:
-                    Colors.indigo[700].withAlpha(140)
+              builder: (context, snapshot) {
+                return SizedBox(
+                  height: 40,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      foregroundColor: Colors.indigo[700],
+                      padding: const EdgeInsets.all(16.0),
+                    ),
+                    onPressed: _submit,
+                    child: Text("Save"),
                   ),
                 );
               },

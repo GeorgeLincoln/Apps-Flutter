@@ -89,7 +89,7 @@ class _MainPage extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: new Text('Move-Aqua'),
+        title: new Text('Move-Aqua'),
       ),
       body: Container(
         child: ListView(
@@ -116,7 +116,7 @@ class _MainPage extends State<MainPage> {
             ListTile(
               title: const Text('Status do Bluetooth'),
               subtitle: Text(_bluetoothState.toString()),
-              trailing: RaisedButton(
+              trailing: TextButton(
                 child: const Text('Configurações'),
                 onPressed: () {
                   FlutterBluetoothSerial.instance.openSettings();
@@ -157,16 +157,16 @@ class _MainPage extends State<MainPage> {
                         if (_discoverableTimeoutSecondsLeft < 0) {
                           FlutterBluetoothSerial.instance.isDiscoverable
                               .then((isDiscoverable) {
-                                if (isDiscoverable) {
-                                  print(
-                                      "Discoverable after timeout... might be infinity timeout :F");
-                                  _discoverableTimeoutSecondsLeft = 0;
-                                }
-                              });
+                            if (isDiscoverable) {
+                              print(
+                                  "Discoverable after timeout... might be infinity timeout :F");
+                              _discoverableTimeoutSecondsLeft = 0;
+                            }
+                          });
                           timer.cancel();
                           _discoverableTimeoutSecondsLeft = 0;
-                          } else {
-                            _discoverableTimeoutSecondsLeft -= 1;
+                        } else {
+                          _discoverableTimeoutSecondsLeft -= 1;
                         }
                       });
                     });
@@ -176,7 +176,6 @@ class _MainPage extends State<MainPage> {
                 }
               },
             ),
-            
 
             Divider(),
             ListTile(title: const Text('Buscando e conectando dispositivos')),
@@ -205,7 +204,7 @@ class _MainPage extends State<MainPage> {
               },
             ),
             ListTile(
-              title: RaisedButton(
+              title: TextButton(
                   child: const Text('Buscar dispositivos'),
                   onPressed: () async {
                     final BluetoothDevice selectedDevice =
@@ -222,7 +221,7 @@ class _MainPage extends State<MainPage> {
                   }),
             ),
             // ListTile(
-            //   title: RaisedButton(
+            //   title: TextButton(
             //     child: const Text('Conecte-se ao dispositivo pareado para conversar'),
             //     onPressed: () async {
             //       final BluetoothDevice selectedDevice = await Navigator.of(context).push(
@@ -243,7 +242,7 @@ class _MainPage extends State<MainPage> {
             Divider(),
             ListTile(title: const Text('Várias conexões')),
             ListTile(
-              title: RaisedButton(
+              title: TextButton(
                 child: ((_collectingTask != null && _collectingTask.inProgress)
                     ? const Text(
                         'Desconectar e interromper a coleta em segundo plano')
@@ -273,7 +272,7 @@ class _MainPage extends State<MainPage> {
               ),
             ),
             ListTile(
-                title: RaisedButton(
+                title: TextButton(
               child: const Text('Exibir dados coletados em segundo plano'),
               onPressed: (_collectingTask != null)
                   ? () {
@@ -315,7 +314,7 @@ class _MainPage extends State<MainPage> {
             title: const Text('Ocorreu um erro ao conectar'),
             content: Text("${ex.toString()}"),
             actions: <Widget>[
-              new FlatButton(
+              new TextButton(
                 child: new Text("Fechar"),
                 onPressed: () {
                   Navigator.of(context).pop();

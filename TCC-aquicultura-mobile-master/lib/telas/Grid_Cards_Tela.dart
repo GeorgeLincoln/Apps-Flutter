@@ -62,17 +62,16 @@ class _GridState extends State<Grid> {
 
     print(_connectionStatus);
 
-    if(_connectionStatus == "ConnectivityResult.none"){
+    if (_connectionStatus == "ConnectivityResult.none") {
       showInSnackBar("No internet connection currently available");
       setState(() {
         _saving = false;
       });
     } else {
-
       bool isExist = false;
 
       QuerySnapshot query =
-      await Firestore.instance.collection(widget.user.uid).getDocuments();
+          await Firestore.instance.collection(widget.user.uid).getDocuments();
 
       query.documents.forEach((doc) {
         if (listNameController.text.toString() == doc.documentID) {
@@ -195,8 +194,7 @@ class _GridState extends State<Grid> {
                           ),
                           ButtonTheme(
                             minWidth: double.infinity,
-                            child: RaisedButton(
-                              elevation: 3.0,
+                            child: TextButton(
                               onPressed: () {
                                 pickerColor = currentColor;
                                 showDialog(
@@ -214,7 +212,7 @@ class _GridState extends State<Grid> {
                                         ),
                                       ),
                                       actions: <Widget>[
-                                        FlatButton(
+                                        TextButton(
                                           child: Text('Got it'),
                                           onPressed: () {
                                             setState(() =>
@@ -228,8 +226,6 @@ class _GridState extends State<Grid> {
                                 );
                               },
                               child: Text('Card color'),
-                              color: currentColor,
-                              textColor: const Color(0xffffffff),
                             ),
                           ),
                         ],
@@ -239,14 +235,14 @@ class _GridState extends State<Grid> {
                       padding: EdgeInsets.only(top: 50.0),
                       child: new Column(
                         children: <Widget>[
-                          new RaisedButton(
+                          new TextButton(
+                            style: TextButton.styleFrom(
+                                foregroundColor: Colors.blue,
+                                padding: const EdgeInsets.all(16.0)),
                             child: const Text(
                               'Add',
                               style: TextStyle(color: Colors.white),
                             ),
-                            color: Colors.blue,
-                            elevation: 4.0,
-                            splashColor: Colors.deepPurple,
                             onPressed: addToFirebase,
                           ),
                         ],
@@ -278,10 +274,10 @@ class _GridState extends State<Grid> {
     initConnectivity();
     _connectivitySubscription =
         _connectivity.onConnectivityChanged.listen((ConnectivityResult result) {
-          setState(() {
-            _connectionStatus = result.toString();
-          });
-        });
+      setState(() {
+        _connectionStatus = result.toString();
+      });
+    });
   }
 
   void showInSnackBar(String value) {
