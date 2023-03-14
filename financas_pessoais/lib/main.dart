@@ -1,4 +1,4 @@
-import 'package:financas_pessoais/views/home_screen.dart';
+import 'package:financas_pessoais/view/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
