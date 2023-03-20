@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "843207832374",
+    "firebase_url": "https://historic-street-default-rtdb.firebaseio.com",
+    "project_id": "historic-street",
+    "storage_bucket": "historic-street.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843207832374:android:abad60148734af20fdb997",
+        "android_client_info": {
+          "package_name": "com.example.historic_street"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843207832374-uu3n3gdffoq1b6ia0p9vaqsv50o8996m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbAixz1AxwMu1B8U00m13VbjWexNqwlc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843207832374-uu3n3gdffoq1b6ia0p9vaqsv50o8996m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "843207832374-0h18g9emgjq9lhmokbfhei7ldfm3mjnt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.historicStreet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
