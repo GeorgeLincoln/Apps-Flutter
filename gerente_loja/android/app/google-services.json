@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "975496834937",
+    "firebase_url": "https://lojaflutter.firebaseio.com",
+    "project_id": "lojaflutter",
+    "storage_bucket": "lojaflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975496834937:android:1b2a40f9836ea864",
+        "android_client_info": {
+          "package_name": "br.com.ciolfi.gerente_loja"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxMY2yR3d51b-gJQz836TTP6bQXYWbq6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975496834937-rhqgj1757f7f1ede8jugddf0i4fqnrkd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "975496834937-s5pjhtthoa1jsuj5fkiahm8od07skk1l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.ciolfi.lojaVirtual"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975496834937:android:0e3bdd708f0bfb2d",
+        "android_client_info": {
+          "package_name": "br.com.ciolfi.lojavirtual"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxMY2yR3d51b-gJQz836TTP6bQXYWbq6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975496834937-rhqgj1757f7f1ede8jugddf0i4fqnrkd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "975496834937-s5pjhtthoa1jsuj5fkiahm8od07skk1l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.ciolfi.lojaVirtual"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975496834937:android:67255b8314e190e1",
+        "android_client_info": {
+          "package_name": "br.com.ciolfi.store_owner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxMY2yR3d51b-gJQz836TTP6bQXYWbq6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975496834937-rhqgj1757f7f1ede8jugddf0i4fqnrkd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "975496834937-s5pjhtthoa1jsuj5fkiahm8od07skk1l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.ciolfi.lojaVirtual"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
