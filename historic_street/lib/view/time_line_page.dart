@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:historic_street/model/doodle.dart';
+import 'package:historic_street/view/item_page.dart';
+import 'package:historic_street/view/product_images_slider_page.dart';
 import 'package:timelines/timelines.dart';
 
 class TimelineScreen extends StatefulWidget {
@@ -38,7 +40,7 @@ class _TimelineScreenState extends State<TimelineScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: const Color.fromARGB(255, 254, 165, 0),
       body: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
@@ -52,35 +54,53 @@ class _TimelineScreenState extends State<TimelineScreen> {
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 child: Timeline.tileBuilder(
+                  theme: TimelineThemeData(
+                    color: const Color.fromARGB(255, 0, 81, 140),
+                    connectorTheme: const ConnectorThemeData(
+                      color: Colors.white,
+                    ),
+                  ),
                   builder: TimelineTileBuilder.fromStyle(
-                    addAutomaticKeepAlives: true,
                     contentsAlign: ContentsAlign.alternating,
                     contentsBuilder: (context, index) {
                       return Card(
                         margin: const EdgeInsets.all(10),
                         elevation: 10,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Image.network(
-                                //height: 130,
-                                doodleData[index].image,
-                              ),
-                              Expanded(
-                                child: SingleChildScrollView(
-                                  scrollDirection: Axis.vertical,
-                                  child: Text(
-                                    textAlign: TextAlign.center,
-                                    doodleData[index].name,
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.black,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Image.network(
+                                  doodleData[index].image,
+                                ),
+                                Expanded(
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.vertical,
+                                    child: Text(
+                                      textAlign: TextAlign.center,
+                                      doodleData[index].name,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
+                              ],
+                            ),
+                          ),
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ItemPage(
+                                img: doodleData[index].image,
+                                name: doodleData[index].name,
                               ),
-                            ],
+                            ),
                           ),
                         ),
                       );
