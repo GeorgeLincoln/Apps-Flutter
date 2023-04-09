@@ -13,18 +13,25 @@ class ProductImagesSliderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ImageSlideshow(
-      indicatorColor: const Color.fromARGB(255, 254, 165, 0),
+      indicatorColor: const Color.fromARGB(255, 0, 81, 140),
       indicatorBackgroundColor: Colors.white,
       height: 500,
-      autoPlayInterval: 1000,
-      indicatorRadius: 4,
-      isLoop: false,
+      autoPlayInterval: 2000,
+      indicatorRadius: 6,
+      initialPage: 5,
+      isLoop: true,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8),
-          child: Image.network(img),
-        ),
+        for (int i = 2; i < 5; i++) numImage(i),
       ],
+    );
+  }
+
+  Widget numImage(index) {
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Image.asset(
+        'images/$img/image$index.jpg',
+      ),
     );
   }
 }

@@ -75,9 +75,10 @@ class _TimelineScreenState extends State<TimelineScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Image.network(
-                                  doodleData[index].image,
-                                ),
+                                Padding(
+                                    padding: const EdgeInsets.all(8),
+                                    child: Image.asset(
+                                        'images/${doodleData[index].image}/image2.jpg')),
                                 Expanded(
                                   child: SingleChildScrollView(
                                     scrollDirection: Axis.vertical,
@@ -99,6 +100,8 @@ class _TimelineScreenState extends State<TimelineScreen> {
                               builder: (context) => ItemPage(
                                 img: doodleData[index].image,
                                 name: doodleData[index].name,
+                                history: doodleData[index].content,
+                                local: doodleData[index].local,
                               ),
                             ),
                           ),

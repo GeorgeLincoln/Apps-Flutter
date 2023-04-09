@@ -14,6 +14,10 @@ dependencies:
     firebase_core: ^2.7.1
     timelines: ^0.1.0
     flutter_image_slideshow: ^0.1.5
+    url_launcher: ^6.0.6
+    wikipedia: ^0.0.7
+    http: ^0.13.4
+    carousel_slider:
     
 
 dev_dependencies:
@@ -23,7 +27,7 @@ dev_dependencies:
 flutter:
     uses-material-design: true
     assets:
-     - images/casa.jpg
+     - images/
   #  - images/a_dot_ham.jpeg
       
   # An image asset can refer to one or more resolution-specific "variants", see

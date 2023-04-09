@@ -162,20 +162,23 @@ class _HomePageState extends State<HomePage> {
 //       .map((snapshot) =>
 //           snapshot.docs.map((e) => Doodle.fromJson(e.data())).toList());
 // }
-class ListDoodle extends StatelessWidget {
+class ListDoodle extends StatefulWidget {
   final Doodle doodle;
 
-  ListDoodle(
-    this.doodle,
-  );
+  const ListDoodle(this.doodle, {super.key});
 
+  @override
+  State<ListDoodle> createState() => _ListDoodleState();
+}
+
+class _ListDoodleState extends State<ListDoodle> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Card(
           child: ListTile(
-            title: Text(doodle.name),
+            title: Text(widget.doodle.name),
           ),
         ),
       ],

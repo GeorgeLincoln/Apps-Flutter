@@ -3,6 +3,7 @@ class Doodle {
   final String name;
   final String content;
   final String image;
+  final String local;
   //final List<String> images;
 
   const Doodle({
@@ -10,6 +11,7 @@ class Doodle {
     required this.name,
     required this.content,
     required this.image,
+    required this.local,
     //required this.images,
   });
 
@@ -18,6 +20,7 @@ class Doodle {
         name: json['name'],
         content: json['content'],
         image: json['image'],
+        local: json['local'],
         //images: json['images']
       );
 
@@ -26,6 +29,8 @@ class Doodle {
         "name": name,
         "content": content,
         "image": image,
+        "local": local,
+
         //"images": images,
       };
 
@@ -35,6 +40,7 @@ class Doodle {
       name: map['name'] ?? '',
       content: map['content'] ?? '',
       image: map['image'] ?? '',
+      local: map['local'] ?? '',
       //images: map['images'] ?? '',
     );
   }
